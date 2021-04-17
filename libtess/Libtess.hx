@@ -1,3 +1,4 @@
+package libtess;
 import libtess.GluTesselator;
 import libtess.WindingRule;
 import libtess.GluEnum;

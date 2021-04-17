@@ -1,4 +1,4 @@
--main Libtess
+-main libtess.Libtess
 # -lib helder.set
 -cp libtess
 -dce std
