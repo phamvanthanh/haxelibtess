@@ -9,5 +9,5 @@
     "classPath": "src/",
     "releasenote": "Initial release",
     "contributors": ["Phamvanthanh"],
-    "main": "Libtess"
+    "main": "libtess.Libtess"
 }
