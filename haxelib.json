@@ -1,0 +1,13 @@
+
+{
+    "name":"libtess",
+    "url" : "https://github.com/phamvanthanh/haxelibtess.git",
+    "license": "MIT",
+    "tags": ["cross", "useless"],
+    "description": "This library is useless in the same way on every platform.",
+    "version": "1.0.0",
+    "classPath": "src/",
+    "releasenote": "Initial release",
+    "contributors": ["Phamvanthanh"],
+    "main": "Libtess"
+}

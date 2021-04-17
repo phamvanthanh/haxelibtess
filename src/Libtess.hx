@@ -1,4 +1,3 @@
-// import libtess.mesh.GluMesh;
 import libtess.GluTesselator;
 import libtess.WindingRule;
 import libtess.GluEnum;
