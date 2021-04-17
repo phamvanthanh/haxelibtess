@@ -1,0 +1,5 @@
+-main Libtess
+# -lib helder.set
+-cp libtess
+-dce std
+-java out/java/
