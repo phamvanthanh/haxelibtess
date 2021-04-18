@@ -35,7 +35,7 @@ class Libtess {
 
   #if java 
   @:overload
-  public static function triangulate(contours: NativeArray<NativeArray<Float>>, coordSize:Int = 2, normal:NativeArray<Float>):Array<Float>{
+  public static function triangulate(contours: NativeArray<NativeArray<Float>>, coordSize:Int = 2, normal:NativeArray<Float>):NativeArray<Float>{
       var carr:Array<Array<Float>> =  [];
 
       for (i in 0...contours.length) {
@@ -45,7 +45,7 @@ class Libtess {
       }
 
       
-      return triangulate(carr);
+      return HxCollection.toNativeArray(triangulate(carr));
 
   }
 
