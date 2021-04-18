@@ -45,7 +45,7 @@ class Libtess {
       }
 
       
-      return HxCollection.toNativeArray(triangulate(carr));
+      return HxCollection.toNativeArray(triangulate(carr, coordSize,HxCollection.toHaxeArray(normal));
 
   }
 
