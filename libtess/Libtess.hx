@@ -7,7 +7,6 @@ import libtess.PrimitiveType;
 #if java
 import java.NativeArray;
 import HxCollection;
-
 #end
 
 @:native
@@ -39,13 +38,11 @@ class Libtess {
       var carr:Array<Array<Float>> =  [];
 
       for (i in 0...contours.length) {
-        var arr = HxCollection.toHaxeArray(contours[i]);
-       
-        carr[i] = arr;
+        carr[i] = HxCollection.toHaxeArray(contours[i]);
       }
 
       
-      return HxCollection.toNativeArray(triangulate(carr, coordSize,HxCollection.toHaxeArray(normal));
+      return HxCollection.toNativeArray(triangulate(carr, coordSize,HxCollection.toHaxeArray(normal)));
 
   }
 
