@@ -4,6 +4,12 @@ import libtess.WindingRule;
 import libtess.GluEnum;
 import libtess.PrimitiveType;
 
+#if java
+import java.NativeArray;
+import HxCollection;
+
+#end
+
 @:native
 @:nativeGen
 @:nativeChildren
@@ -26,12 +32,36 @@ class Libtess {
      
   }
 
-    public static function triangulate(contours: Array<Array<Float>>, coordSize:Int = 2, normal:Array<Float>):Array<Float>{
+  #if java 
+  @:overload
+  public static function triangulate(contours: NativeArray<NativeArray<Float>>, coordSize:Int = 2, normal:NativeArray<Float>):Array<Float>{
+      var carr:Array<Array<Float>> =  [];
+
+      for (i in 0...contours.length) {
+        var arr = HxCollection.toHaxeArray(contours[i]);
+       
+        carr[i] = arr;
+      }
+
+      
+      return triangulate(carr);
+
+  }
+
+  
+  @:overload
+  #end
+  public static function triangulate(contours: Array<Array<Float>>, coordSize:Int = 2, normal:Array<Float> = null):Array<Float>{
 
         // libtess will take 3d verts and flatten to a plane for tesselation
         // since only doing 2d tesselation here, provide z=1 normal to skip
         // iterating over verts only to get the same answer.
         // comment out to test normal-generation code
+
+        if(normal == null){
+          normal = [0,0,1];
+        }
+
         if(coordSize == 2){
           return triagulate2D(contours, normal);
         }
@@ -150,6 +180,8 @@ class Libtess {
       return tessy;
 
     }
+
+
 
 
 
