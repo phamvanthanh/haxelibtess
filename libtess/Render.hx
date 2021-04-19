@@ -88,6 +88,7 @@ static public function renderMesh(tess:GluTesselator, mesh:GluMesh, flagEdges:Bo
         }
 
         // emit vertex
+        trace(e.org.data);
         tess.callVertexCallback(e.org.data);
 
         e = e.lNext;
