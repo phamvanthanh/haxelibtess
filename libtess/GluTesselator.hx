@@ -163,7 +163,7 @@ class GluTesselator {
    * Vertex callback.
    * private {?function(Object/number, Object=)} 
    */
-   public var vertexCallback_:(flag : Int, data : Any) -> Void  = null;
+   public var vertexCallback_:(flag : Any, data : Any) -> Void  = null;
 
   /**
    * End callback.

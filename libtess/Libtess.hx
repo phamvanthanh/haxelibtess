@@ -143,7 +143,12 @@ class Libtess {
 
       // function called for each vertex of tesselator output
       function vertexCallback(data:Array<Float>, polyVertArray:Array<Float>) {
-        // console.log(data[0], data[1]);
+        trace(data[0]);
+        trace(data[1]);
+        // if(  Std.isOfType(data, Int)){
+
+        // }
+      
         polyVertArray[polyVertArray.length] = data[0];
         polyVertArray[polyVertArray.length] = data[1];
       }
