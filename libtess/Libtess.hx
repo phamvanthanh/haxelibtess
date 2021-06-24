@@ -143,8 +143,7 @@ class Libtess {
 
       // function called for each vertex of tesselator output
       function vertexCallback(data:Array<Float>, polyVertArray:Array<Float>) {
-        trace(data[0]);
-        trace(data[1]);
+      
         // if(  Std.isOfType(data, Int)){
 
         // }
